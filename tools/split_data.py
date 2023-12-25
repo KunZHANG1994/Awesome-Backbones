@@ -16,8 +16,8 @@ def main():
         os.makedirs(path)
     
     split_rate = 0.2
-    init_dataset = ''
-    new_dataset = 'datasets'
+    init_dataset = '/home/iiwa/zk_ws/hangbot/data/gsmini'
+    new_dataset = '/home/iiwa/zk_ws/hangbot/data/gsmini_dataset'
     random.seed(0)
 
     classes_name = [name for name in os.listdir(init_dataset)]

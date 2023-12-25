@@ -71,7 +71,7 @@ def main():
     meta['seed'] = seed
     
     # 读取训练&制作验证标签数据
-    total_annotations   = "datas/train.txt"
+    total_annotations   = "/home/iiwa/zk_ws/hangbot/data/gsmini/train.txt"
     with open(total_annotations, encoding='utf-8') as f:
         total_datas = f.readlines()
     if args.split_validation:
@@ -89,7 +89,7 @@ def main():
         val_datas = total_datas[val_start:val_end]
     else:
         train_datas = total_datas.copy()
-        test_annotations    = 'datas/test.txt'
+        test_annotations    = '/home/iiwa/zk_ws/hangbot/data/gsmini/test.txt'
         with open(test_annotations, encoding='utf-8') as f:
             val_datas   = f.readlines()
     

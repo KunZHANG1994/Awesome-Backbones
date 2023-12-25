@@ -4,13 +4,13 @@ sys.path.insert(0,os.getcwd())
 from utils.train_utils import get_info
 
 def main():
-    classes_path    = 'datas/annotations.txt'
-    datasets_path   = 'datasets'
+    classes_path    = '/home/iiwa/zk_ws/hangbot/data/gsmini/annotations.txt'
+    datasets_path   = '/home/iiwa/zk_ws/hangbot/data/gsmini'
     datasets        = ["train", "test"]
     classes, indexs = get_info(classes_path)
     
     for dataset in datasets:
-        txt_file = open('datas/' + dataset + '.txt', 'w')
+        txt_file = open('/home/iiwa/zk_ws/hangbot/data/gsmini/' + dataset + '.txt', 'w')
         datasets_path_ = os.path.join(datasets_path, dataset)
         classes_name      = os.listdir(datasets_path_)
         

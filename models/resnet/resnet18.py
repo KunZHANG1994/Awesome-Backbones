@@ -10,8 +10,8 @@ model_cfg = dict(
     neck=dict(type='GlobalAveragePooling'),
     head=dict(
         type='LinearClsHead',
-        num_classes=1000,
-        in_channels=512,
+        num_classes=6,
+        in_channels=128,
         loss=dict(type='CrossEntropyLoss', loss_weight=1.0),
         topk=(1, 5),))
 
@@ -158,8 +158,8 @@ val_pipeline = [
 
 # train
 data_cfg = dict(
-    batch_size = 32,
-    num_workers = 4,
+    batch_size = 2,
+    num_workers = 1,
     train = dict(
         pretrained_flag = False,
         pretrained_weights = '',
@@ -183,7 +183,7 @@ data_cfg = dict(
 # optimizer
 optimizer_cfg = dict(
     type='SGD',
-    lr=0.1 * 32/256,
+    lr=0.1 * 2/256,
     momentum=0.9,
     weight_decay=1e-4)
 
